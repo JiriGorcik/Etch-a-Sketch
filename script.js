@@ -1,7 +1,8 @@
 const mainBox = document.querySelector(".main-box")
 const griSize = document.querySelector("#grid-size")
 const gridSizeLabel = document.querySelector(".grid-size-label")
-const newGrid = document.querySelector(".new-grid")
+const newGridBtn = document.querySelector(".new-grid")
+const resetbtn = document.querySelector(".reset")
 
 
 griSize.addEventListener("input", () => {
@@ -24,7 +25,17 @@ const makeGrid = (rows, cols) => {
 }
 
 
-newGrid.addEventListener("click", () => {
+newGridBtn.addEventListener("click", () => {
+    let size = griSize.value
+    
+    while (mainBox.firstChild) {
+    mainBox.removeChild(mainBox.firstChild)
+    }
+    
+    makeGrid(size,size)
+})
+
+resetbtn.addEventListener("click", () => {
     let size = griSize.value
     
     while (mainBox.firstChild) {
