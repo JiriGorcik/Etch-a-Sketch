@@ -3,6 +3,8 @@ const griSize = document.querySelector("#grid-size")
 const gridSizeLabel = document.querySelector(".grid-size-label")
 const newGridBtn = document.querySelector(".new-grid")
 const resetbtn = document.querySelector(".reset")
+const colorbtn = document.querySelector(".color")
+console.log(colorbtn.value)
 
 
 griSize.addEventListener("input", () => {
@@ -17,7 +19,7 @@ const makeGrid = (rows, cols) => {
     for (let i = 0; i < (rows * cols); i++) {
         let cell = document.createElement("div")
         cell.addEventListener("mouseenter", () => {
-            cell.style.backgroundColor = "black"
+            cell.style.backgroundColor = colorbtn.value
         })
         mainBox.appendChild(cell).className = "grid-item"
         

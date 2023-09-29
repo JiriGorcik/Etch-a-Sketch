@@ -7,15 +7,18 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
+    <h1>Etch-a-Sketch</h1>
+    <div class="features">
+        <h2>Choose Color</h2>
+        <input class="color" type="color" > <br>
+        <input id="grid-size" type="range" min="2" max="64" step="2" value="16">
+        <label class="grid-size-label" for="size">16x16</label> <br>
+        <button class="new-grid">Resize</button>
+        <button class="reset">Reset</button>
+    </div>
+
     <div class="container">
-        <div class="features">
-            <label class="grid-size-label" for="size">16x16</label> <br>
-            <input id="grid-size" type="range" min="2" max="64" step="2" value="16"><br>
-            <button class="new-grid">Make new Grid</button>
-            <button class="reset">Reset</button>
-        </div>
-        <div class="main-box">
-        </div>
+        <div class="main-box"></div>
     </div>
 
     <script src="script.js"></script>
